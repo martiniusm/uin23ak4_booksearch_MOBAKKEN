@@ -12,6 +12,7 @@ export default function Bookcards({ bookcards }) {
                         <h4>{element.author_name}</h4>
                         <p>Publish year: {element.first_publish_year}</p>
                         <p>Average rating: {element.ratings_average}</p>
+                        {element.isbn? <p>ISBN:{element.isbn.length===13? element.isbn[0]: element.isbn[1]}</p> : <p>ISBN ikke tilgjengelig</p>}
                         <a href={amazonUrl}>Buy the book here</a>
                     </article>
                 )
