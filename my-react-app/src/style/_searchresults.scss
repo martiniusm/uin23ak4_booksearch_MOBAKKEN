@@ -1,0 +1,19 @@
+nav{
+   
+    h1 {
+        color: bisque;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem;
+        padding: 1rem;
+
+        label {
+            font-size: larger;
+            padding: .5rem;
+        }
+    }
+}

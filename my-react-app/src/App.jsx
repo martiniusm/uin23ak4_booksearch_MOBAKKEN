@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import SearchPage from './components/SearchPage'
+import Searchresults from './components/Searchresults'
 
 function App() {
   
-  const [content, setContent] = useState([])
+  const [bookcards, setBookcards] = useState([])
 
   const getData = async() =>{
     fetch(`https://openlibrary.org/search.json?q=title:"James Bond"`)
     .then(response => response.json())
-    .then(data => setContent(data.docs))
+    .then(data => setBookcards(data.docs))
     .catch(error => console.error(error))
   }
 
@@ -18,7 +18,7 @@ function App() {
   },[])
 
   return (
-    <SearchPage content={content} />
+    <Searchresults bookcards={bookcards} />
   )
 }
 

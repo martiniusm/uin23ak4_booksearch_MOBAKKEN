@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Content from './Content'
+import Bookcards from './Bookcards'
 
-export default function SearchPage({content}) {
+export default function Searchresults({bookcards}) {
 
     const [search, setSearch] = useState("")
 
@@ -25,7 +25,7 @@ export default function SearchPage({content}) {
             </form>
         </nav> 
         <main>
-            <Content content={content}/>
+            <Bookcards bookcards={bookcards}/>
         </main>
     </>
     )

@@ -1,0 +1,14 @@
+@import 'bookcards';
+@import 'searchresults';
+
+body {
+    background-color: #5D5C61;
+
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1rem;
+        gap: 2rem;
+    }
+}
