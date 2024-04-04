@@ -2,7 +2,7 @@ export default function Bookcards({ bookcards }) {
     return (
         <>
             {bookcards?.map(element => {
-                const amazonUrl = `https://www.amazon.com/s?k=${element.id_amazon}`
+                const amazonUrl = `https://www.amazon.com/s?k=${element.isbn? element.isbn[0] : false}`
                 return (
                     <article key={element.key}>
                         {element.isbn && (
